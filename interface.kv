@@ -1,0 +1,63 @@
+<Gerenciador>:
+    Menu:
+    Simulacoes:
+    Opcoes:
+
+
+<Menu>:
+    name: 'Menu'
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text: 'Bem-vindo ao PhysIFs'
+            font_size: 50
+        Button:
+            text: 'Simulações'
+            font_size: 30
+            on_release: root.manager.current = 'Simulacoes'
+        Button:
+            text: 'Opções'
+            font_size: 30
+            on_release: root.manager.current = 'Opcoes'
+        Button:
+            text: 'Sair'
+            font_size: 30
+            on_release:
+
+<Simulacoes>:
+    name: 'Simulacoes'
+    GridLayout:
+        rows: 3
+        Label:
+            text: 'Simulações'
+            font_size: 50
+        Button:
+            text: 'Simulação 1'
+            font_size: 30
+            on_release:
+        Button:
+            text: 'Simulação 2'
+            font_size: 30
+            on_release:
+        Button:
+            text: 'Back to menu'
+            on_press: root.manager.current = 'Menu'
+
+<Opcoes>:
+    name: 'Opcoes'
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text: 'Opções'
+            font_size: 50
+        Button:
+            text: 'Tamanho da Interface'
+            font_size: 30
+            on_release:
+        Button:
+            text: 'Outras opções'
+            font_size: 30
+            on_release:
+        Button:
+            text: 'Voltar para o Menu'
+            on_press: root.manager.current = 'Menu'
